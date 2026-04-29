@@ -1,0 +1,29 @@
+{
+  "name": "etude-tauri-mac-unified-toolbar",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "clean": "rm -rf dist dist-ssr src-tauri/target src-tauri/gen/schemas",
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "tauri": "tauri",
+    "check:js": "biome check src/ vite.config.ts",
+    "fix:js": "biome check --write src/ vite.config.ts",
+    "check:rust": "cargo fmt --check --manifest-path src-tauri/Cargo.toml && cargo clippy --manifest-path src-tauri/Cargo.toml",
+    "fix:rust": "cargo fmt --manifest-path src-tauri/Cargo.toml && cargo clippy --fix --allow-dirty --manifest-path src-tauri/Cargo.toml",
+    "check": "npm run check:js && npm run check:rust",
+    "fix": "npm run fix:js && npm run fix:rust"
+  },
+  "dependencies": {
+    "@tauri-apps/api": "^2",
+    "@tauri-apps/plugin-opener": "^2"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.4.10",
+    "@tauri-apps/cli": "^2",
+    "typescript": "~5.6.2",
+    "vite": "^6.0.3"
+  }
+}

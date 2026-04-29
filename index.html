@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="/src/styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>A native-feeling macOS unified toolbar tauri app</title>
+    <script type="module" src="/src/main.ts" defer></script>
+  </head>
+
+  <body>
+    <header class="toolbar" data-tauri-drag-region>
+      <div class="toolbar-left" data-tauri-drag-region>
+        <button
+          type="button"
+          class="toolbar-btn"
+          id="btn-back"
+          aria-label="Back"
+          disabled
+        >
+          <svg
+            width="9"
+            height="15"
+            viewBox="0 0 9 15"
+            fill="none"
+            aria-hidden="true"
+          >
+            <title>Back</title>
+            <path
+              d="M8 1L1 7.5L8 14"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+        <button
+          type="button"
+          class="toolbar-btn"
+          id="btn-forward"
+          aria-label="Forward"
+          disabled
+        >
+          <svg
+            width="9"
+            height="15"
+            viewBox="0 0 9 15"
+            fill="none"
+            aria-hidden="true"
+          >
+            <title>Forward</title>
+            <path
+              d="M1 1L8 7.5L1 14"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+      </div>
+
+      <div class="toolbar-center" data-tauri-drag-region>
+        <div class="address-bar">
+          <span class="address-text">tauri://localhost</span>
+        </div>
+      </div>
+
+      <div class="toolbar-right" data-tauri-drag-region>
+        <button
+          type="button"
+          class="toolbar-btn"
+          id="btn-share"
+          aria-label="Share"
+        >
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 16 16"
+            fill="none"
+            aria-hidden="true"
+          >
+            <title>Share</title>
+            <path
+              d="M8 1v9M4 4l4-3 4 3M2 10v4h12v-4"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+        <button
+          type="button"
+          class="toolbar-btn"
+          id="btn-sidebar"
+          aria-label="Toggle Sidebar"
+        >
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 16 16"
+            fill="none"
+            aria-hidden="true"
+          >
+            <title>Toggle Sidebar</title>
+            <rect
+              x="1"
+              y="1"
+              width="14"
+              height="14"
+              rx="2"
+              stroke="currentColor"
+              stroke-width="1.5"
+            />
+            <path d="M5 1v14" stroke="currentColor" stroke-width="1.5" />
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <main class="container">
+      <h1>Welcome to Tauri</h1>
+    </main>
+  </body>
+</html>
